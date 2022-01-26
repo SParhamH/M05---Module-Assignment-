@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bullseye! Tutoring</title>
+    <link rel="stylesheet" href="css/c04.css" />
+    <style>
+    	body {
+	background-color: #523620;
+	color: #fff;
+	font-family: 'Wellfleet', times, serif;
+	font-size: 150%;
+	margin: 0px 0px 0px 0px;}
+
+h1 {
+	background-image: url('https://javascriptbook.com/code/c04/images/bullseye-logo.png');
+	background-repeat: no-repeat;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	height: 109px;
+	width: 643px;
+	margin: 40px auto;}
+
+#teacher {
+	float:right;
+	margin:0px 30px 0px 0px;}
+#teacher2 {
+	float:right;
+	margin:135px 30px 0px 0px;}
+
+#page1, #page2 {
+	background-color: #fecc6f;
+	height: 596px;
+	padding: 10px;
+	min-width: 779px;}
+#page2 {
+	height: 730px;}
+
+#answer {
+	border: 12px double #fff;
+	color: #523620;
+	text-align: left;
+	padding: 20px;
+	margin: 70px auto 10px auto;
+	width: 250px;
+	text-align: center;}
+
+#blackboard {
+	background-color: #425a5a;
+	border: 25px solid #523620;
+	border-radius: 20px;
+	padding: 40px 20px;
+	margin: 0px auto;
+	height: 370px;
+	width: 600px;
+	text-align: center;}
+    </style>
+  </head>
+  
+  <body>
+  	<section id="page1">
+    	<section id="blackboard">
+  		<h2>Number : <input type="text" id="Multiplication Table" /><br></h2>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = 'page2'">Done</button>
+        </section>
+    </section>
+    <section id="page2"> 
+      <h1>Bullseye</h1>
+      <img src="https://javascriptbook.com/code/c04/images/teacher.png" id="teacher2" alt="" />
+      <section id="blackboard"></section>
+    </section>
+    
+    <script>
+var msg = '<h2>Multiplication Table</h2>';             // Unit of table
+var operator = 'Multiplication'; // Type of calculation
+var i = 1;                 // Set counter to 1
+var msg = '';              // Message
+
+if (operator === 'Multiplication') {
+  // Do multiplication
+  while (i < 11) {
+    msg += i + ' x ' + table + ' = ' + (i * msg) + '<br />';
+    i++;
+  }
+}
+
+// Write the message into the page
+var el = document.getElementById('blackboard');
+el.innerHTML = msg;
+    </script>
+    
+  </body>
+  
+</html>
